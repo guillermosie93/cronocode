@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "alarm clock";
+    src:url('alarmClock.ttf')
+}
+
+header{
+    padding: 10px;
+}
+
+.title{
+    font-size: 2rem;
+    font-family: 'alarm clock';
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+body{
+    background-color: #000000a4;
+}
+
+#cronoDiv__cicule--animation{
+    z-index: 1;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    margin: 20%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top:2px solid #fca400ca;
+    border-right:2px solid #fbc259c7;
+    border-bottom: 2px solid #fada9fbd;
+    border-left: 2px solid #fbf1de7e;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    background-color: transparent;
+    animation-name: spinner-time;
+    animation-play-state: paused;
+}
+
+#nav__div--contain{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    height: 60px;
+    width: 100%;
+/*     background-color: #000000a4; */
+}
+
+#nav__div--contain button{
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+}
+
+#cronoDiv__contain{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center; 
+    color: #ffffff;
+    align-self: center;
+    margin-left: 10px;
+    margin-top: -50px;
+    position: absolute;
+    z-index: 10;
+}
+#cronoDiv__number--contain{
+    align-self: center;
+    height: fit-content;
+}
+
+#cronoDiv__number--contain span{
+    font-size: 2rem;
+    font-family: 'alarm clock';
+    font-weight: 900;
+}
+
+#cronoDiv__command--contain{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+    margin-top: 25px;
+}
+
+#cronoDiv__command--contain button{
+    height: 50px;
+    width: 50px;
+    font-size: 2.5rem;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+}
+
+#pause, #stop{
+    display: none;
+}
+
+
+
+@keyframes spinner-time{
+    0%{
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(1turn);
+    }
+}
